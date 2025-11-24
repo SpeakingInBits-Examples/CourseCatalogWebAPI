@@ -1,6 +1,51 @@
-@CourseCatalogWebAPI_HostAddress = http://localhost:5079
+@CourseCatalogWebAPI_HostAddress = https://localhost:7060
 
-GET {{CourseCatalogWebAPI_HostAddress}}/weatherforecast/
+GET https://localhost:7060/api/courses
+
+###
+
+### Get a single course by id (replace 1 with an actual id)
+GET {{CourseCatalogWebAPI_HostAddress}}/api/courses/1
 Accept: application/json
 
 ###
+
+# Create a new course (valid example)
+POST {{CourseCatalogWebAPI_HostAddress}}/api/courses
+Content-Type: application/json
+
+{
+  "title": "Intro to Computer Science",
+  "numCredits": 3,
+  "startDate": "2025-09-01"
+}
+
+###
+
+# Create a course that should fail validation (numCredits too low)
+POST {{CourseCatalogWebAPI_HostAddress}}/api/courses
+Content-Type: application/json
+
+{
+  "title": "Invalid Course!",
+  "numCredits": 0,
+  "startDate": "2025-09-01"
+}
+
+###
+
+# Update an existing course (replace 1 with the course id)
+PUT {{CourseCatalogWebAPI_HostAddress}}/api/courses/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Intro to Computer Science - Updated",
+  "numCredits": 4,
+  "startDate": "2025-09-01"
+}
+
+###
+
+# Delete a course (replace 1 with the course id)
+DELETE {{CourseCatalogWebAPI_HostAddress}}/api/courses/1
