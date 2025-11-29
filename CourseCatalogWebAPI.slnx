@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="CourseCatalog.Core/CourseCatalog.Core.csproj" Id="55b0d0f0-7490-4f0c-a508-1fd0242d7134" />
   <Project Path="CourseCatalogWebAPI/CourseCatalogWebAPI.csproj" />
   <Project Path="CourseCatalogWinForms/CourseCatalogWinForms.csproj" Id="3c221d25-0813-4c75-a732-3a88d2664a1e" />
 </Solution>

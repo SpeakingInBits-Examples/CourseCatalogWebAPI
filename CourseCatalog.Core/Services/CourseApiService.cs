@@ -1,7 +1,7 @@
 using System.Net.Http.Json;
-using CourseCatalogWinForms.Models;
+using CourseCatalog.Core.Models;
 
-namespace CourseCatalogWinForms.Services;
+namespace CourseCatalog.Core.Services;
 
 /// <summary>
 /// Service for communicating with the Course Catalog Web API.

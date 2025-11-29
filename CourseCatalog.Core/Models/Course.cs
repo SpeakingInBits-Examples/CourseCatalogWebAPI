@@ -1,6 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
-namespace CourseCatalogWebAPI.Models;
+namespace CourseCatalog.Core.Models;
 
 /// <summary>
 /// Represents a single college course in the course catalog.
@@ -31,4 +31,12 @@ public class Course
     /// The first day of class for the course.
     /// </summary>
     public DateOnly StartDate { get; set; }
+
+    /// <summary>
+    /// String representation for display purposes.
+    /// </summary>
+    public override string ToString()
+    {
+        return $"{Title} - {NumCredits} credits - Starts: {StartDate:MM/dd/yyyy}";
+    }
 }

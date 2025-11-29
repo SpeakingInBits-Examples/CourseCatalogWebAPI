@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using CourseCatalogWebAPI.Models;
+using CourseCatalog.Core.Models;
 
 namespace CourseCatalogWebAPI.Data;
 

@@ -1,4 +1,4 @@
-using CourseCatalogWinForms.Services;
+using CourseCatalog.Core.Services;
 
 namespace CourseCatalogWinForms
 {
