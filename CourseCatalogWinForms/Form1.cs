@@ -62,8 +62,12 @@ public partial class Form1 : Form
         try
         {
             Course? addedCourse = await _courseApiService.CreateCourseAsync(newCourse);
-            MessageBox.Show("Added " + addedCourse?.ToString());
-            await LoadCoursesAsync();
+
+            if (addedCourse != null)
+            {
+                MessageBox.Show("Added " + addedCourse.ToString());
+                lstCourses.Items.Add(addedCourse);
+            }
         }
         catch (Exception ex)
         {
